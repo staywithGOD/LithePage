@@ -12,14 +12,48 @@
 
 LithePage 是面向超长学术 HTML 页面的本地渲染优化扩展，设计用于 Google Chrome 与 Microsoft Edge。它智能延后屏幕外正文的布局和绘制；翻译仍由浏览器自带网页翻译完成。
 
-### 使用
+### 快速开始
 
-1. 打开论文的 HTML 全文页，等待 LithePage 自动检测。
-2. 点击工具栏图标，确认显示“流畅模式已开启”。
-3. 再使用 Chrome 或 Edge 的“翻译成中文”。
-4. 若页面布局或翻译异常，将“当前网站”设为“不在本站开启”，再刷新页面并重新翻译。“临时关闭此页”只在本次页面生命周期内有效。
+#### 1. 下载并解压
 
-旧标签页在扩展升级后需要刷新一次。PDF、浏览器内部页面、iframe 阅读器、canvas 阅读器、Shadow DOM 内的全文和部分高度交互式页面不受支持。
+1. 打开 [LithePage 最新版本](https://github.com/staywithGOD/LithePage/releases/latest)。
+2. 下载名称中含 `Chromium.zip` 的扩展包（当前版本为 `LithePage-v2.0.0-Chromium.zip`），然后将其完整解压到一个固定文件夹；不要直接从 ZIP 压缩包中加载。
+3. 打开解压后的文件夹，确认第一层可以看到 `manifest.json`。浏览器安装时应选择这一层文件夹，而不是 ZIP 文件或它的上一级目录。
+
+在 Chrome Web Store 和 Microsoft Edge Add-ons 正式上架前，LithePage 采用下面的开发者模式安装方式。
+
+#### 2. 安装到 Chrome
+
+1. 在地址栏打开 `chrome://extensions`。
+2. 开启右上角的“开发者模式”。
+3. 点击“加载已解压的扩展程序”。
+4. 选择上一步中直接包含 `manifest.json` 的文件夹。
+5. 出现 LithePage 卡片且开关为开启状态，即表示安装成功。
+
+#### 3. 安装到 Edge
+
+1. 在地址栏打开 `edge://extensions`。
+2. 开启“开发人员模式”。
+3. 点击“加载解压缩的扩展”。
+4. 选择直接包含 `manifest.json` 的文件夹。
+5. 出现 LithePage 卡片且开关为开启状态，即表示安装成功。
+
+官方参考：[Chrome 加载未打包扩展](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) · [Edge 本地加载扩展](https://learn.microsoft.com/en-us/microsoft-edge/extensions/getting-started/extension-sideloading)
+
+#### 4. 固定图标
+
+点击浏览器工具栏的扩展按钮，在 LithePage 旁选择“固定”或“显示在工具栏中”。这样可以随时查看当前页面的检测状态和开关。
+
+#### 5. 优化并翻译论文
+
+1. 打开论文的 **HTML 全文页**，不要打开 PDF 阅读器。
+2. 如果该标签页在安装或升级 LithePage 之前已经打开，请先刷新一次。
+3. 点击 LithePage 图标，等待自动检测；显示“流畅模式已开启”即表示当前页面已经优化。
+4. 再通过地址栏翻译图标或网页右键菜单，使用 Chrome 或 Edge 的“翻译成中文”。优化应在开始翻译前生效。
+5. 首次在新网站使用时，抽查正文和参考文献的开头、中部与结尾。
+6. 若页面布局或翻译异常，将“当前网站”设为“不在本站开启”，再刷新页面并重新翻译。“临时关闭此页”只在本次页面生命周期内有效。
+
+如果页面没有自动开启，可在弹窗中选择“重新检测”或“强制优化此页”。强制尝试仍会保留所有结构与安全检查，因此某些页面会继续保持关闭。PDF、浏览器内部页面、iframe 阅读器、canvas 阅读器、Shadow DOM 内的全文和部分高度交互式页面不受支持。
 
 ### 浏览器支持
 
@@ -90,14 +124,48 @@ pnpm test:edge
 
 LithePage is a local rendering optimizer for very long academic HTML pages, designed for Google Chrome and Microsoft Edge. It defers layout and painting for off-screen article content while the browser's built-in page translation continues to handle translation.
 
-### Usage
+### Quick start
 
-1. Open the full-text HTML version of a paper and wait for LithePage to finish automatic detection.
-2. Select the toolbar icon and confirm that the popup reports that Smooth Mode is active.
-3. Start the browser's built-in page translation in Chrome or Edge.
-4. If layout or translation looks incorrect, set the current site to **Never enable**, refresh the page, and translate it again. **Disable on this page** lasts only for the current page lifecycle.
+#### 1. Download and extract
 
-Tabs that were already open when the extension was upgraded must be refreshed once. PDF files, internal browser pages, iframe readers, canvas readers, full text inside Shadow DOM, and some highly interactive pages are not supported.
+1. Open the [latest LithePage release](https://github.com/staywithGOD/LithePage/releases/latest).
+2. Download the extension asset whose name ends in `Chromium.zip` (currently `LithePage-v2.0.0-Chromium.zip`) and fully extract it to a permanent folder. Do not load the extension directly from inside the ZIP archive.
+3. Open the extracted folder and confirm that `manifest.json` is visible at its top level. Select this folder during installation, not the ZIP file or its parent directory.
+
+Until LithePage is published in the Chrome Web Store and Microsoft Edge Add-ons, install it with developer mode as described below.
+
+#### 2. Install in Chrome
+
+1. Open `chrome://extensions` in the address bar.
+2. Turn on **Developer mode** in the upper-right corner.
+3. Select **Load unpacked**.
+4. Choose the extracted folder that directly contains `manifest.json`.
+5. Installation is complete when the LithePage card appears and its switch is enabled.
+
+#### 3. Install in Edge
+
+1. Open `edge://extensions` in the address bar.
+2. Turn on **Developer mode**.
+3. Select **Load unpacked**.
+4. Choose the folder that directly contains `manifest.json`.
+5. Installation is complete when the LithePage card appears and its switch is enabled.
+
+Official references: [Load an unpacked extension in Chrome](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) · [Sideload an extension in Edge](https://learn.microsoft.com/en-us/microsoft-edge/extensions/getting-started/extension-sideloading)
+
+#### 4. Pin the icon
+
+Open the browser's extensions menu and pin LithePage, or choose to show it in the toolbar. This keeps the page status and controls within easy reach.
+
+#### 5. Optimize and translate a paper
+
+1. Open the paper's **full-text HTML page**, not its PDF reader.
+2. Refresh the tab once if it was already open before LithePage was installed or upgraded.
+3. Select the LithePage icon and wait for automatic detection. The page is optimized when the popup reports **流畅模式已开启 (Smooth Mode active)**.
+4. Only then start **Translate to Chinese** from the address-bar translation icon or the page context menu in Chrome or Edge. Optimization should be active before translation begins.
+5. On a new website, check the beginning, middle, and end of both the article and its bibliography.
+6. If layout or translation looks incorrect, set the current site to **不在本站开启 (Never enable on this site)**, refresh the page, and translate it again. **临时关闭此页 (Temporarily disable on this page)** lasts only for the current page lifecycle.
+
+If Smooth Mode does not activate automatically, use **重新检测 (Recheck)** or **强制优化此页 (Force optimization on this page)** in the popup. A forced attempt still keeps every structural and safety gate, so some pages will remain inactive. PDF files, internal browser pages, iframe readers, canvas readers, full text inside Shadow DOM, and some highly interactive pages are not supported.
 
 ### Browser support
 
@@ -162,3 +230,4 @@ Do not include paywalled article text, cookies, login credentials, or institutio
 ### License status
 
 This repository does not yet have an open-source license. The source is public for review, testing, and collaborative discussion, but that does not automatically grant permission to copy, redistribute, or use it commercially. If an open-source license is adopted later, the repository license file and documentation will be updated explicitly.
+
