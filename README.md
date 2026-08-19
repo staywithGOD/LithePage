@@ -230,4 +230,3 @@ Do not include paywalled article text, cookies, login credentials, or institutio
 ### License status
 
 This repository does not yet have an open-source license. The source is public for review, testing, and collaborative discussion, but that does not automatically grant permission to copy, redistribute, or use it commercially. If an open-source license is adopted later, the repository license file and documentation will be updated explicitly.
-
