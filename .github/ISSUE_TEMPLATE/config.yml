@@ -1,5 +1,5 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Security vulnerability
+  - name: "Security vulnerability / 安全漏洞"
     url: https://github.com/staywithGOD/LithePage/security/advisories/new
-    about: Report security issues privately instead of opening a public issue.
+    about: "Report security issues privately instead of opening a public issue. / 请通过私密渠道报告安全问题，不要创建公开 Issue。"

@@ -1,6 +1,11 @@
-# Contributing to LithePage
+# Contributing to LithePage / 参与贡献
 
-感谢你帮助改进 LithePage。请先阅读以下边界：
+语言 / Language: [中文](#中文) · [English](#english)
+
+<a id="中文"></a>
+## 中文
+
+感谢你帮助改进 LithePage。贡献前请遵守以下边界：
 
 - 不要提交付费论文正文、Cookie、机构凭据或账号数据；
 - 不增加远程代码、分析服务、广告或开发者服务器通信；
@@ -8,7 +13,9 @@
 - 性能收益不能抵消漏译、裁切、焦点、打印或无障碍回退；
 - 新分块必须继续满足无祖孙双标、8–150 块和覆盖率安全门槛。
 
-## 本地检查
+### 本地检查
+
+需要 Node.js 20 或更高版本和 pnpm：
 
 ```text
 pnpm install
@@ -16,9 +23,9 @@ pnpm test:chrome
 pnpm test:edge
 ```
 
-提交兼容性修复时，请说明浏览器版本、公开页面模板、复现步骤，以及正文和参考文献首/中/末是否完整。涉及真实页面的截图应移除账号、机构和论文受限内容。
+提交兼容性修复时，请说明浏览器版本、公开页面模板、复现步骤，以及正文和参考文献首/中/末是否完整。涉及真实页面的截图必须移除账号、机构信息和受限论文内容。
 
-## Pull Request
+### Pull Request
 
 PR 应包含：
 
@@ -27,3 +34,40 @@ PR 应包含：
 - 新增或更新的回归场景；
 - Chrome 与 Edge 测试结果；
 - 已知风险及一键关闭/恢复路径。
+
+自动回归不能替代真实页面验收。如果改动影响识别、分块、翻译期间行为、打印或无障碍，请同时说明已完成的手动检查和仍未验证的范围。
+
+<a id="english"></a>
+## English
+
+Thank you for helping improve LithePage. Contributions must preserve the following boundaries:
+
+- Do not submit paywalled article text, cookies, institutional credentials, or account data.
+- Do not add remote code, analytics, advertising, or developer-server communication.
+- Do not replace structure-based detection with a publisher-domain allowlist.
+- Performance gains must not take precedence over translation completeness, clipping, focus behavior, printing, or accessibility fallbacks.
+- New segmentation behavior must preserve the no-ancestor/descendant invariant, the 8–150 block range, and the coverage safety gates.
+
+### Local checks
+
+Node.js 20 or later and pnpm are required:
+
+```text
+pnpm install
+pnpm test:chrome
+pnpm test:edge
+```
+
+For a compatibility fix, report the browser version, a public page template, reproduction steps, and whether the beginning, middle, and end of both the article and bibliography remain complete. Screenshots from real pages must remove account details, institutional information, and restricted article content.
+
+### Pull requests
+
+A pull request should include:
+
+- what changed and why;
+- user-facing and compatibility impact;
+- new or updated regression scenarios;
+- Chrome and Edge test results;
+- known risks and the one-click disable or restoration path.
+
+Automated regressions do not replace real-page acceptance testing. If a change affects detection, segmentation, behavior during translation, printing, or accessibility, also document the manual checks completed and the scope that remains unverified.

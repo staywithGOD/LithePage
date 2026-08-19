@@ -1,44 +1,44 @@
-name: Bug report
-description: Report a reproducible LithePage compatibility or rendering problem.
+name: "Bug report / 错误报告"
+description: "Report a reproducible LithePage compatibility or rendering problem. / 报告可复现的 LithePage 兼容性或渲染问题。"
 title: "[Bug] "
 labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: Do not paste paid article text, cookies, passwords, institution credentials, or access tokens.
+      value: "Do not paste paid article text, cookies, passwords, institution credentials, or access tokens. / 请勿粘贴付费论文正文、Cookie、密码、机构凭据或访问令牌。"
   - type: input
     id: browser
     attributes:
-      label: Browser and version
-      placeholder: Chrome 128 or Edge 128
+      label: "Browser and version / 浏览器及版本"
+      placeholder: "Chrome 151 or Edge 151 / Chrome 151 或 Edge 151"
     validations:
       required: true
   - type: input
     id: lithepage
     attributes:
-      label: LithePage version
+      label: "LithePage version / LithePage 版本"
       placeholder: 2.0.0
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: Reproduction steps
-      description: Use a public URL when possible and describe whether built-in translation was enabled.
+      label: "Reproduction steps / 复现步骤"
+      description: "Use a public URL when possible and state whether built-in translation was enabled. / 请尽量提供公开网址，并说明是否启用了浏览器自带翻译。"
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected and actual behavior
+      label: "Expected and actual behavior / 预期与实际表现"
     validations:
       required: true
   - type: checkboxes
     id: checks
     attributes:
-      label: Safety checks
+      label: "Safety checks / 安全检查"
       options:
-        - label: I checked the beginning, middle, and end of the article and bibliography.
+        - label: "I checked the beginning, middle, and end of the article and bibliography. / 我已检查正文与参考文献的开头、中部和结尾。"
           required: true
-        - label: I removed account, institution, and restricted-content information.
+        - label: "I removed account, institution, and restricted-content information. / 我已移除账号、机构和受限内容信息。"
           required: true
