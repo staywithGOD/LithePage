@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "LithePage"
+  },
+  "extensionDescription": {
+    "message": "Detects long academic HTML pages and defers off-screen rendering while the browser keeps handling translation."
+  },
+  "actionTitle": {
+    "message": "LithePage: view optimization status"
+  }
+}

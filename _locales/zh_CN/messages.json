@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "LithePage"
+  },
+  "extensionDescription": {
+    "message": "自动识别超长学术 HTML 页面并延后屏幕外渲染；翻译仍由浏览器自带网页翻译完成。"
+  },
+  "actionTitle": {
+    "message": "LithePage：查看当前论文优化状态"
+  }
+}

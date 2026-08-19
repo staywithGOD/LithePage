@@ -1,0 +1,11 @@
+html[data-ap-smooth-active="on"] [data-ap-smooth-block="1"] {
+  content-visibility: auto !important;
+  contain-intrinsic-block-size: auto var(--ap-smooth-intrinsic-block-size, 420px) !important;
+}
+
+@media print {
+  html[data-ap-smooth-active="on"] [data-ap-smooth-block="1"] {
+    content-visibility: visible !important;
+    contain-intrinsic-block-size: none !important;
+  }
+}

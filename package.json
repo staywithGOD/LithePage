@@ -1,0 +1,30 @@
+{
+  "name": "lithepage",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Local rendering optimization for long academic HTML pages in Chrome and Microsoft Edge.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staywithGOD/LithePage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/staywithGOD/LithePage/issues"
+  },
+  "homepage": "https://github.com/staywithGOD/LithePage#readme",
+  "scripts": {
+    "test": "node tests/run-all-regressions.cjs",
+    "test:chrome": "node tests/run-all-regressions.cjs chrome",
+    "test:edge": "node tests/run-all-regressions.cjs msedge",
+    "render:popup": "node scripts/render-popup.cjs",
+    "render:assets": "node scripts/render-store-assets.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "sharp": "0.35.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@10.15.1"
+}

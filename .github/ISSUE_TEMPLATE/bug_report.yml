@@ -1,0 +1,44 @@
+name: Bug report
+description: Report a reproducible LithePage compatibility or rendering problem.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Do not paste paid article text, cookies, passwords, institution credentials, or access tokens.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Chrome 128 or Edge 128
+    validations:
+      required: true
+  - type: input
+    id: lithepage
+    attributes:
+      label: LithePage version
+      placeholder: 2.0.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use a public URL when possible and describe whether built-in translation was enabled.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety checks
+      options:
+        - label: I checked the beginning, middle, and end of the article and bibliography.
+          required: true
+        - label: I removed account, institution, and restricted-content information.
+          required: true

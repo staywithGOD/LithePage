@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LithePage 设置</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <img src="icons/icon-48.png" width="48" height="48" alt="">
+        <div>
+          <p class="eyebrow">LITHEPAGE</p>
+          <h1>LithePage 设置</h1>
+          <p>保守地优化长篇学术 HTML 页面，继续使用浏览器自带翻译。</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>默认行为</h2>
+        <label class="setting">
+          <span><strong>自动识别长论文</strong><small>仅在安全分块和覆盖率均达标时启用。</small></span>
+          <input id="autoEnabled" type="checkbox">
+        </label>
+        <label class="setting">
+          <span><strong>检测延迟加载全文</strong><small>失败后短时观察页面，最多 12 秒；启用成功后立即停止。</small></span>
+          <input id="hydrationObserverEnabled" type="checkbox">
+        </label>
+        <label class="setting">
+          <span><strong>优化超长参考文献</strong><small>仅识别为高置信度参考区时整体处理，不跳过翻译。</small></span>
+          <input id="referenceOptimizationEnabled" type="checkbox">
+        </label>
+      </section>
+
+      <section class="panel disclosure">
+        <h2>隐私与权限</h2>
+        <p>LithePage 在本机读取网页结构、文字长度和元素尺寸，只用于判断及应用渲染优化。它不上传论文内容、不含分析服务、广告或远程代码。</p>
+        <p>扩展需要访问普通 HTTP/HTTPS 页面，才能覆盖未知出版社、学会网站及学校代理地址。它不读取 Cookie、密码或浏览历史。</p>
+        <button id="clearSiteModes" type="button">清除所有按网站偏好</button>
+        <p id="saved" class="saved" role="status"></p>
+      </section>
+
+      <footer>LithePage 2.0.0 · 本机处理 · 无广告、分析或远程代码</footer>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="LithePage">
+  <defs>
+    <linearGradient id="bg" x1="72" y1="52" x2="452" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#103849"/>
+      <stop offset="1" stop-color="#0A8C73"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="170" y1="115" x2="340" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDFBF3"/>
+    </linearGradient>
+  </defs>
+  <rect x="64" y="64" width="384" height="384" rx="104" fill="url(#bg)"/>
+  <path d="M165 127c0-15.5 12.5-28 28-28h97l57 58v211c0 15.5-12.5 28-28 28H193c-15.5 0-28-12.5-28-28V127Z" fill="url(#paper)"/>
+  <path d="M290 99v43c0 15.5 12.5 28 28 28h29" fill="#B9F0E3"/>
+  <path d="M204 220h89" stroke="#157B69" stroke-width="24" stroke-linecap="round"/>
+  <path d="M204 273h58" stroke="#1BB799" stroke-width="24" stroke-linecap="round"/>
+  <path d="M204 326h101" stroke="#45D9B8" stroke-width="24" stroke-linecap="round"/>
+  <path d="m300 310 30 16-30 16" fill="none" stroke="#45D9B8" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LithePage</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header class="brand">
+        <img class="logo" src="icons/icon-48.png" width="42" height="42" alt="">
+        <div class="brand-copy">
+          <div class="title-line"><h1>LithePage</h1><span>2.0</span></div>
+          <p>长篇学术网页渲染优化</p>
+        </div>
+      </header>
+
+      <section class="card status-card" aria-live="polite">
+        <div class="status-row">
+          <span id="statusDot" class="status-dot checking"></span>
+          <strong id="statusTitle">正在检查当前页面</strong>
+        </div>
+        <p id="statusDetail">请稍候…</p>
+        <div id="metricsCard" class="metrics" hidden>
+          <div><strong id="metricBlocks">—</strong><span>内容块</span></div>
+          <div><strong id="metricCoverage">—</strong><span>文本覆盖</span></div>
+          <div><strong id="metricTime">—</strong><span>检测耗时</span></div>
+          <div><strong id="metricReferences">—</strong><span>参考条目</span></div>
+        </div>
+      </section>
+
+      <section class="card controls">
+        <label class="switch-row">
+          <span>
+            <strong>自动优化长论文网页</strong>
+            <small>仅检测到长篇文章时启用</small>
+          </span>
+          <input id="autoEnabled" type="checkbox">
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+
+        <label class="select-row" for="siteMode">
+          <span>
+            <strong>当前网站</strong>
+            <small id="currentHost">—</small>
+          </span>
+          <select id="siteMode">
+            <option value="auto">自动判断</option>
+            <option value="on">总是尝试</option>
+            <option value="off">不在本站开启</option>
+          </select>
+        </label>
+
+        <details class="advanced">
+          <summary>智能检测设置</summary>
+          <label class="switch-row compact">
+            <span><strong>检测延迟加载全文</strong><small>失败后短时观察，成功即停止</small></span>
+            <input id="hydrationObserverEnabled" type="checkbox">
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+          <label class="switch-row compact last">
+            <span><strong>优化超长参考文献</strong><small>只处理高置信度参考区</small></span>
+            <input id="referenceOptimizationEnabled" type="checkbox">
+            <span class="switch" aria-hidden="true"></span>
+          </label>
+        </details>
+      </section>
+
+      <section class="actions">
+        <button id="recheck" type="button">重新检测</button>
+        <button id="pageToggle" class="primary" type="button">强制优化此页</button>
+      </section>
+
+      <div class="footer-row">
+        <span>本机处理 · 不上传论文</span>
+        <button id="openOptions" class="text-button" type="button">设置与隐私</button>
+      </div>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
